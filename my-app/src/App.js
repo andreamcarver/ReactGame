@@ -1,9 +1,10 @@
 import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import cards from "./cards.json";
 
-function shuffleCards() {
-  //TODO figure out how to shuffle
+function shuffleCards(cards) {
+  return cards.sort((a, b) => 0.5 - Math.random());
 }
 
 class App extends Component {
@@ -48,9 +49,22 @@ class App extends Component {
 
   handleShuffle = () => {
     let shuffledCards = shuffleCards(cards);
-    this.setState({ cards: shuffledcards });
+    this.setState({ cards: shuffledCards });
     //shuffles the cards
   };
+  render() {
+    return (
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+          <h1 className="App-title">Welcome to React</h1>
+        </header>
+        <p className="App-intro">
+          To get started, edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
 }
 
 // class App extends Component {
