@@ -8,7 +8,7 @@ import img6 from "./damselfish.jpg";
 import img7 from "./grunt.jpg";
 import img8 from "./parrotfish.jpg";
 import img9 from "./rockbeauty.jpg";
-import img10 from "./sergeantmajor.jpg'";
+import img10 from "./sergeantmajor.jpg";
 import img11 from "./tang.jpg";
 
 export default [

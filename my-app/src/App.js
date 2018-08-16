@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import cards from "./cards.json";
+import img from "./images";
 
 function shuffleCards(cards) {
   return cards.sort((a, b) => 0.5 - Math.random());
@@ -60,6 +61,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <p className="App-intro">
+          <img src={img[0]} />
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
       </div>
