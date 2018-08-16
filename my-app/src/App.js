@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-function shuffleCards(){
+function shuffleCards() {
   //TODO figure out how to shuffle
 }
 
@@ -23,16 +23,15 @@ class App extends Component {
   handleIncrement = () => {
     const newScore = this.state.currentScore + 1;
     this.setState({
-      currentScore: newScore;
+      currentScore: newScore,
       isCorrect: ""
     });
-    if (newScore > this.state.topScore){
-      this.setState({ topScore: newScore})
+    if (newScore > this.state.topScore) {
+      this.setState({ topScore: newScore });
+    } else if (newScore === 12) {
+      this.setState({ isCorrect: "VERY NICE" });
     }
-    else if (newScore === 12){
-      this.setState({isCorrect: "VERY NICE"})
-    }
-    this.handleShuffle
+    this.handleShuffle;
     //adds one to current score
   };
 
@@ -48,20 +47,10 @@ class App extends Component {
   };
 
   handleShuffle = () => {
-    let shuffledCards = shuffleCards(cards)
-    this.setState({cards: shuffledcards})
+    let shuffledCards = shuffleCards(cards);
+    this.setState({ cards: shuffledcards });
     //shuffles the cards
   };
-}
-
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Game />
-      </div>
-    );
-  }
 }
 
 // class App extends Component {
